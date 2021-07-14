@@ -1,0 +1,18 @@
+// .div-container {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: nowrap;
+//     height: auto;
+//     width: 10000px;
+// }
+
+
+@import 'variables';
+@import 'header';
+@import 'main-section';
+
+
+::selection {
+    background-color: $faded-black;
+    color: $white;
+}

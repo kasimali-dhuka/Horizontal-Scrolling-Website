@@ -1,0 +1,1455 @@
+// $parallax-perspective : 8px;
+
+// @function parallax-scale-factor($z-distance){
+//     @return ($parallax-perspective - $z-distance) / $parallax-perspective;
+// }
+
+
+.main-container {
+    // padding-top: 4em;
+    position: relative;
+
+    // Section 1 styling...................
+    .section1 {
+        padding: 10vh 6.6vh 10vh 26.1vh;
+        justify-content: start;
+        background: url("../images/mcgill-front.jpg");
+        background-repeat: no-repeat;
+        background-clip: border-box;
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: center 2rem;
+
+        @media (max-width: $lg) {
+            padding-left: 11vw;
+            height: 100vh;
+        }
+
+        .div-content {
+            position: absolute;
+            transform: translate(0%, 10%);
+
+            > h2 {
+                font-size: calc(99.6px + 3.6vw);
+                line-height: 1.2;
+                color: $white;
+
+                @media (max-width: $md) {
+                    font-size: 80px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 50px;
+                }
+
+                @media screen and (min-width:$lg) and (max-height: 800px) {
+                    font-size: 7.8571428571rem;
+                }
+
+                span {
+                    display: block;
+                    overflow: hidden;
+
+                    > a {
+                        display: inline-block;
+                        color: $white;
+                        text-decoration: none;
+                        // font-size: 12px;
+                        background-color: #ed1b2f;
+                        // padding: 5em;
+                        border-radius: 50%;
+                        vertical-align: middle;
+                        position: relative;
+                        width: 8.5714285714rem;
+                        height: 8.5714285714rem;
+                        font-size: 20px;
+
+                        @media (max-width: $lg) {
+                            width: 100px;
+                            height: 100px;
+                            transform: rotate(90deg);
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            width: 60px;
+                            height: 60px;
+                        }
+
+                        &:hover > i {
+                            transform: translate(-35%, -35%) scale(1.5);
+                        }
+
+                        > i {
+                            position: absolute;
+                            height: 2.1428571429rem;
+                            width: 2.1428571429rem;
+                            top: 55%;
+                            left: 56%;
+                            transform: translate(-50%, -50%) scale(0.7);
+                            transition: 0.3s;
+
+                            @media screen and (max-width: $sm) {
+                                top: 60%;
+                                left: 60%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // -----------------------------------------------------------------------
+
+    // Section 2 styling .....................
+    .section2 {
+        min-width: 46.6%;
+        max-width: 90vh;
+        padding: calc(19.8vh) 13vh 13vh 25vh;
+        align-items: flex-start;
+
+        @media screen and (min-width: $lg) and (max-height: 800px) {
+            min-width: 880px !important;
+            padding: 13.6vw 13vh !important;
+        }
+
+        @media (max-width: $lg) {
+            padding: 120px 90px;    
+            height: auto;
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: $md) {
+            padding: 120px 60px;
+        }
+
+        @media screen and (max-width: $sm) {
+            padding: 60px 30px;
+        }
+        
+        .content2 {
+            
+            .version{
+                display: block;
+                font-size: 12px;
+                margin-bottom: 2.8vh;
+                letter-spacing: .3em;
+                color: $faded-black;
+                font-weight: 600;
+            }
+
+            > h2 {
+                font-size: calc(3.6px + 3.6vw);
+                color: $red-text;
+                font-weight: 400;
+                line-height: $lh;
+                margin-bottom: 6.6vh;
+
+                @media (max-width: $lg) {
+                    font-size: 50px;
+                    margin-bottom: 60px;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 40px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 30px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            > p {
+                font-size: calc(13.4px + .4vw);
+                line-height: 1.5;
+                color: $black;
+
+                @media (max-width: $lg) {
+                    font-size: 26px;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 20px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 16px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    // -------------------------------------------------------------------
+
+    // Section 3 styling ...............................
+    .section3 {
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+        width: 90%;
+
+        @media (max-width: $lg) {
+            height: auto;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $sm){
+            min-height: 250px;
+            background-image: url('../images/section2-img.png');
+            background-attachment: scroll;
+            background-clip: border-box;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .section-img {
+            transform: translate(0%, 2.8rem);
+            height: 94%;
+
+            @media (max-width: $lg) {
+                height: auto;
+                width: 120%;
+            }
+
+            @media screen and (max-width: $sm){
+                visibility: hidden;
+            }
+        }
+
+        .img-caption {
+            position: absolute;
+            left: 120px;
+            bottom: 4px;
+            z-index: 1;
+            background-color: $faded-black;
+            color: $white;
+            font-size: 12px;
+            padding: 10px;
+            max-width: 400px;
+
+            @media (max-width: $lg) {
+                left: 75px;
+            }
+
+            @media screen and (max-width: $sm) {
+                max-width: 200px;
+                font-size: 10px;
+                padding: 5px;
+                left: 20px;
+            }
+        }
+    }
+    // -------------------------------------------------------------------
+
+    // Section 4 styling ...............................
+    .section4 {
+        min-width: 72.7%;
+        max-width: 120vh;
+        background: #9e0918;
+
+        @media screen and (min-width:$lg) and (max-height: 800px) {
+            min-width: 1120px;
+        }
+
+        .content4 {
+            padding: calc(13.8vh + 45px) 13vh 13vh 26.1vh;
+            color: $white;
+
+            @media screen and (max-width: $lg) {
+                padding: 120px 90px;
+            }
+
+            @media screen and (max-width: $sm) {
+                padding: 60px 30px;
+            }
+
+            @media screen and (min-width:$lg) and (max-height: 800px) {
+                padding: calc(2.4vh + 14px) 13vh 6vw 13vh!important;
+                align-self: flex-end;
+            }
+
+            .content4-wrapper {
+                position: relative;
+
+                // Button style for pop-up box
+                .content4-pop-up-btn {
+                    position: absolute;
+                    top: 0;
+                    left: -58px;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #ed1b2f;
+                    border-radius: 50%;
+                    cursor: pointer;
+
+                    @media screen and (max-width: $sm) {
+                        left: -30px;
+                        width: 30px;
+                        height: 30px;
+                    }
+    
+                    .close-btn {
+                        color: $red-text;
+                        background-color: $white;
+                        font-family: Arial, Helvetica, sans-serif;
+                        padding: 1px 8px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transition: transform 0.3s;
+                    }
+    
+                    // .open {
+                    //     transform: translate(-50%, -50%) scale(0.8) rotate(45deg);
+                    // }
+                }
+                // ------- End of Button style -------
+    
+                // Styling of Pop-up box on button click
+                .content4-pop-up-title {
+                    display: inline-block;
+                    width: 400px;
+                    position: absolute;
+                    z-index: 100;
+                    top: 0;
+                    left: 0;
+                    background-color: $white;
+                    color: $black;
+                    padding: 60px;
+                    border-radius: 10px;
+                    text-align: center;
+                    transform: translate(50px, -35px);
+                    opacity: 0;
+                    transition: transform 0.3s, opacity 0.3s;
+
+                    @media (max-width: $lg) {
+                        padding: 30px;
+                    }
+    
+                    &::before {
+                        content: '';
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        top: 43px;
+                        left: -20px;
+                        border: 10px solid;
+                        border-color: transparent white transparent transparent;
+                    }
+    
+                    > .head {
+                        display: inline-block;
+                        font-size: 1.1428571429rem;
+                        font-weight: 700;
+                        font-family: Arial, Helvetica, sans-serif;
+                        margin-bottom: 25px;
+
+                        @media (max-width: $lg) {
+                            font-size: 19px;
+                        }
+
+                        @media screen and (max-width: $md) {
+                            font-size: 14px;
+                            margin-bottom: 15px;
+                        }
+                    }
+    
+                    > .para {
+                        background-color: $white;
+                        display: inline-block;
+                        font-size: 1.2857142857rem;
+                        padding: 0;
+                        margin: 0;
+                        color: $black;
+
+                        @media (max-width: $lg) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+    
+                .show-r {
+                    transform: translate(0, -35px);
+                    opacity: 1;
+                }
+                // ------ End of pop-up box -----
+                
+                > h2 {
+                    position: relative;
+                    font-size: calc(16.4px + .4vw);
+                    line-height: $lh;
+                    margin: 0 0 36px;
+
+                    @media (max-width: $lg) {
+                        font-size: 26px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        font-size: 20px;
+                    }
+                    
+                    @media screen and (max-width: $sm) {
+                        font-size: 12.0pt;
+                        margin-bottom: 30px;
+                    }
+                }
+    
+                > p {
+                    margin-bottom: 30px;
+                    font-size: 12.0pt;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+        }
+    }
+    // --------------------------------------------------------------------
+
+    // Section 5 styling ...............................
+    .section5 {
+        min-width: 36%;
+        max-width: 70vh;
+
+        @media screen and (min-width:$lg) and (max-height: 800px) {
+            min-width: 900px;
+        }
+
+        .content5 {
+            padding: calc(13.8vh + 45px) 13.2vh 13vh;
+
+            @media (max-width: $lg) {
+                padding: 120px 90px;
+            }
+
+            @media screen and (max-width: $sm) {
+                padding: 60px 30px;
+            }
+
+            @media screen and (min-width:$lg) and (max-height: 800px) {
+                padding: calc(9.4vh + 14px) 13vh 6.6vh!important;
+                align-self: center;
+            }
+
+            > h2, p {
+                font-size: 25.0pt;
+                line-height: 107%;
+                margin-top: 35px;
+
+                @media screen and (max-width: $md) {
+                    font-size: 22.0pt;
+                }
+
+                > a {
+                    text-decoration: underline;
+                    color: $black;
+
+                    &:hover, &:active{
+                        color: $red-text;
+                    }
+                }
+            }
+        }
+    }
+    // -------------------------------------------------------------------
+
+    // Section 6 styling ...............................
+    .section6{
+        overflow: hidden;
+
+        @media (max-width: $lg) {
+            height: 100vh;
+            background-image: url('../images/royal-victoria-hospital.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-clip: border-box;
+            background-attachment: scroll;
+        }
+
+        @media screen and (max-width: $md) {
+            height: 92vh;
+        }
+
+        @media screen and (min-width:$lg) and (max-height: 800px) {
+            background-image: url('../images/royal-victoria-hospital.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-clip: border-box;
+            background-attachment: scroll;
+        }
+
+        .parallax-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 10vh 6.6vh 10vh 26.1vh;
+            // perspective: 10px;
+            // perspective-origin: 0%;
+            // display: flex;
+
+            @media screen and (min-width:$lg) and (max-height: 800px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @media (max-width: $lg) {
+                padding: 120px 90px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            @media screen and (max-width: $md) {
+                padding: 90px 60px;
+            }
+
+            .section-bg-img {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                filter: brightness(0.7);
+                // transform: translateZ(0px);
+
+                @media (max-width: $lg) {
+                    visibility: hidden;
+                }
+
+                @media screen and (min-width:$lg) and (max-height: 800px) {
+                    visibility: hidden;
+                }
+            }
+
+            .content6 {
+                transform-origin: 0%;
+                transform: translate3d(0px, 16em, 0px);
+                // transform: translateZ(3px) scale(parallax-scale-factor(3));
+
+                @media screen and (min-width:$lg) and (max-height: 800px) {
+                    transform: translate3d(0, 0, 0);
+                }
+
+                @media (max-width: $lg) {
+                    transform: translate3d(0, 0, 0);
+                }
+
+                > h2 {
+                    font-size: calc(110.6px + 3.6vw);
+                    line-height: 1.1;
+                    color: $white;
+
+                    @media (max-width: $lg) {
+                        font-size: 120px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        font-size: 80px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 50px;
+                    }
+
+                    @media screen and (min-width:$lg) and (max-height: 800px) {
+                        font-size: 7.8571428571rem;
+                    }
+
+                    .title-wrapper {
+                        transform: translate3d(-450px, 0px, 0px);
+
+                        @media screen and (max-width: $lg) {
+                            transform: translate3d(0,0,0);
+                        }
+                    }
+
+                    span {
+                        display: block;
+                        overflow: hidden;
+
+                        > a {
+                            display: inline-block;
+                            color: $white;
+                            text-decoration: none;
+                            // font-size: 12px;
+                            background-color: #ed1b2f;
+                            // padding: 5em;
+                            border-radius: 50%;
+                            vertical-align: middle;
+                            position: relative;
+                            width: 8.5714285714rem;
+                            height: 8.5714285714rem;
+                            font-size: 20px;
+
+                            @media screen and (min-width:$lg) and (max-height: 800px) {
+                                width: 6.1428571429rem;
+                                height: 6.1428571429rem;
+                            }
+
+                            @media (max-width: $lg) {
+                                width: 120px;
+                                height: 120px;
+                                transform: rotate(90deg);
+                            }
+                            @media screen and (max-width: $md) {
+                                width: 100px;
+                                height: 100px;
+                            }
+
+                            @media screen and (max-width: $sm) {
+                                width: 60px;
+                                height: 60px;
+                            }
+    
+                            &:hover > i {
+                                transform: translate(-35%, -35%) scale(1.5);
+                            }
+    
+                            > i {
+                                position: absolute;
+                                height: 2.1428571429rem;
+                                width: 2.1428571429rem;
+                                top: 55%;
+                                left: 56%;
+                                transform: translate(-50%, -50%) scale(0.7);
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // -------------------------------------------------------------------
+
+    // Section 7 styling
+    .section7 {
+        position: relative;
+        min-width: 49.7% !important;
+        max-width: 91vh !important;
+
+        @media screen and (max-width: $lg) {
+            height: 600px !important;
+            max-width: 100% !important;
+            overflow: hidden;
+        }
+
+        @media screen and (max-width: $md) {
+            height: 400px !important;
+        }
+
+        @media screen and (max-width: $sm) {
+            height: 250px !important;
+        }
+        
+        > img {
+            width: 100%;
+            margin-top: 100px;
+
+            @media screen and (max-width: $lg) {
+                margin-top: 0;
+            }
+        }
+
+        > p {
+            position: absolute;
+            left: 34px;
+            bottom: 4px;
+            z-index: 1;
+            background-color: $faded-black;
+            color: $white;
+            font-size: 12px;
+            padding: 10px;
+            max-width: 400px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            @media screen and (max-width: $sm) {
+                font-size: 10px;
+                left: 10px;
+            }
+        }
+    }
+    // --------------------------------------------------------------------
+
+    // Section 8 styling
+    .section8 {
+        min-width: 72.7%;
+        max-width: 120vh;
+        background: #9e0918;
+
+        @media screen and (min-width: $lg) and (max-height: 800px){
+            min-width: 1120px;
+        }
+
+        .content8{
+            color: $white;
+            padding: calc(12.8vh + 14px) 26.1vh 13vh 39.2vh;
+
+            @media screen and (max-width: $lg) {
+                padding: 120px 90px;
+            }
+
+            @media screen and (max-width: $md) {
+                padding: 120px 60px;
+            }
+
+            @media screen and (max-width: $sm) {
+                padding: 60px 30px;
+            }
+
+            @media screen and (min-width: $lg) and (max-height: 800px){
+                padding: 22.6vh 13vh 6.6vh calc(13vh + 120px)!important;
+            }
+
+            > span {
+                display: block;
+                letter-spacing: 0.3em;
+                font-size: 12px;
+                margin-bottom: 2.8vh;
+                font-family: Arial, Helvetica, sans-serif
+            }
+
+            > h2 {
+                font-size: calc(9.6px + 3.6vw);
+                line-height: $lh;
+                font-weight: 400;
+                margin-bottom: 6.6vh;
+
+                @media screen and (max-width: $lg) {
+                    font-size: 50px;
+                    margin-bottom: 60px;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 40px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 30px;
+                    margin-bottom: 30px;
+                }
+
+                @media screen and (min-width: $lg) and (max-height: $lg) {
+                    font-size: 2.8571428571rem;
+                }
+            }
+
+            > blockquote {
+                margin: 0;
+                
+                > p {
+                    font-size: calc(16px + .4vw);
+                    margin-bottom: 30px;
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 26px;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        font-size: 20px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        font-size: 18px;
+                    }
+
+                    @media screen and (min-width: $lg) and (max-height: $lg) {
+                        font-size: 1.2857142857rem;
+                    }
+
+                    > a {
+                        text-decoration: underline;
+                        color: $white;
+
+                        &:hover ,&:active {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+
+            > p {
+                font-size: 12.0pt;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    // --------------------------------------------------------------------
+
+    // Section 9 styling
+    .section9 {
+        position: relative;
+        min-width: 75%;
+        max-width: 120vh;
+        overflow: hidden;
+
+        @media screen and (min-width: $lg) and (max-height: 800px) {
+            min-width: 88%;
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: $sm){
+            min-height: 250px;
+            background-image: url('../images/roof-print.jpg');
+            background-attachment: scroll;
+            background-clip: border-box;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        > img {
+            height: 93%;
+            margin-top: 110px;
+            margin-left: 40px;
+
+            @media screen and (max-width: $lg) {
+                margin: 0;
+                max-width: 120%;
+                height: 55vw;
+            }
+
+            @media screen and (max-width: $sm) {
+                visibility: hidden;
+            }
+
+            @media screen and (min-width: $lg) and (max-height: 800px) {
+                margin-left: 0;
+                height: auto;
+            }
+        }
+
+        > p {
+            position: absolute;
+            left: 34px;
+            bottom: 4px;
+            z-index: 1;
+            background-color: $faded-black;
+            color: $white;
+            font-size: 12px;
+            padding: 10px;
+            max-width: 400px;
+            font-family: Arial, Helvetica, sans-serif;
+
+            @media screen and (max-width: $sm) {
+                font-size: 10px;
+                left: 10px;
+                max-width: 200px;
+            }
+        }
+    }
+    // ---------------------------------------------------------------------
+
+    // Section 10 styling
+    .section10 {
+        position: relative;
+        min-width: 49%;
+        max-width: 90vh;
+
+        @media screen and (min-width: $lg) and (max-height: 800px) {
+            min-width: 880px;
+        }
+
+        .content10{
+            padding: calc(12.8vh + 128px) 14vh 13vh;
+
+            @media screen and (min-width: $lg) and (max-height: 800px) {
+                padding: calc(20.4vh + 14px) 13vh 0!important;
+            }
+
+            @media screen and (max-width: $lg) {
+                padding: 120px 90px;
+            }
+
+            @media screen and (max-width: $md) {
+                padding: 120px 60px;
+            }
+
+            @media screen and (max-width: $sm) {
+                padding: 60px 30px;
+            }
+
+            .dotted-line {
+                width: 100%;
+                height: 100%;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 194px;
+                    height: 100%;
+                    border-left: 2px dotted $black;
+
+                    @media screen and (max-width: $lg) {
+                        left: 9.3rem;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        left: 110px;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        left: 60px !important;
+                    }
+
+                    @media screen and (min-width: $lg) and (max-height: 800px) {
+                        left: 19vh;
+                    }
+
+                    @media screen and (max-height: 700px) {
+                        left: 20vh;
+                    }
+
+                    @media screen and (max-height: 600px) {
+                        left: 22vh;
+                    }
+                }
+            }
+
+            .features-panel {
+                display: flex;
+                align-items: center;
+                margin-bottom: 3.3vh;
+
+                @media screen and (max-width: $sm) {
+                    align-items: flex-start;
+                }
+
+                .feature-icon{
+                    width: 7.5714285714rem;
+                    height: 7.5714285714rem;
+                    position: relative;
+
+                    @media screen and (min-width: $lg) and (max-height: 800px) {
+                        width: 6.1428571429rem;
+                        height: 6.1428571429rem;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        width: 6.5714285714rem;
+                        height: 6.5714285714rem;
+                    }
+
+                    @media screen and (max-width: $sm) {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    .icon-wrapper {
+                        color: $red-text;
+                        // position: absolute;
+                        // top: 50%;
+                        // left: 50%;
+                        // transform: translate(-50%, -50%);
+                        font-size: 3em;
+                        width: 7.2857142857rem;
+                        height: 7.2857142857rem;
+                        border: 2px solid $black;
+                        border-radius: 50%;
+                        background-color: $white;
+
+                        @media screen and (min-width: $lg) and (max-height: 800px) {
+                            width: 6.2857142857rem;
+                            height: 6.2857142857rem;
+                        }
+
+                        @media screen and (max-width: $md) {
+                            width: 6.2857142857rem;
+                            height: 6.2857142857rem;
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            width: 60px;
+                            height: 60px;
+                        }
+
+                        > i {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+
+                            @media screen and (min-width: $lg) and (max-height: 800px) {
+                                font-size: 2.2142857143rem;
+                            }
+
+                            @media screen and (max-width: $md) {
+                                font-size: 1.7865rem;
+                            }
+                        }
+                    }
+                }
+
+                .feature-desc {
+                    padding-left: 20px;
+                    font-family: Arial, Helvetica, sans-serif;
+
+                    > h2 {
+                        font-size: calc(14px + .5vw);
+                        color: $red-text;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+
+                        @media screen and (max-width: $lg) {
+                            font-size: 30px;
+                        }
+
+                        @media screen and (max-width: $md) {
+                            font-size: 20px;
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                        }
+                        
+                        @media screen and (min-width: $lg) and (max-height: 800px) {
+                            font-size: 1.2142857143rem;
+                        }
+                    }
+
+                    > p {
+                        font-size: 14px;
+
+                        @media screen and (max-width: $lg) {
+                            font-size: 20px;
+                        }
+
+                        @media screen and (max-width: $md) {
+                            font-size: 18px;
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            font-size: 13px;
+                        }
+
+                        @media screen and (min-width: $lg) and (max-height: 800px) {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // ---------------------------------------------------------------------
+
+    // Section 11
+    .section11{ 
+        @extend .section5;
+        background-color: #9e0918;
+
+        .content11 {
+            padding: calc(14.8vh + 14px) 13vh 13vh;
+            color: $white;
+
+            @media screen and (min-width:$lg) and (max-height: 800px) {
+                padding: calc(14.4vh + 14px) 13vh 6.6vh!important;
+            }
+
+            @media screen and (max-width: $lg) {
+                padding: 120px 90px;
+            }
+
+            @media screen and (max-width: $md) {
+                padding: 120px 60px;
+            }
+
+            @media screen and (max-width: $sm) {
+                padding: 60px 30px 60px 40px;
+            }
+
+            .content11-wrapper{
+                position: relative;
+
+                > h2 {
+                    position: relative;
+                    font-size: calc(16.4px + .4vw);
+                    line-height: 1.2;
+                    margin: 0 0 36px;
+
+                    @media screen and (max-width: $lg) {
+                        font-size: 26px;
+                        line-height: $lh;
+                    }
+
+                    @media screen and (max-width: $md) {
+                        font-size: 20px;
+                    }
+
+                    .content11-btn1 {
+                        top: 0;
+                        right: -57px;
+
+                        @media screen and (max-width: $md) {
+                            right: -50px;
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            right: -27px;
+                        }
+                    }
+    
+                    .pop-up-btn {
+                        @include popup-btn;
+    
+                        .close-btn {
+                            @include closebtn;
+                        }
+                    }
+    
+                    .pop-up-tooltip {
+                        @include popup-tooltip;
+    
+                        > .head {
+                            @include popup-tooltip-head;
+                        }
+                        
+                        > .para {
+                            @include popup-tooltip-para
+                        }
+                    }
+
+                    .content11-tooltip1 {
+                        top: -70px;
+                        right: 0;
+                        transform: translate(-50px, 0px);
+
+                        @media screen and (max-width: $sm) {
+                            top: -45px;
+                        }
+
+                        &::before {
+                            @include popup-tooltip-before(80px, -20px, unset, unset, $tp, $tp, $tp, $white);
+
+                            @media screen and (max-width: $sm) {
+                                top: 50 px;
+                            }
+                        }
+                    }
+                }
+    
+                p {
+                    position: relative;
+                    font-size: 13.0pt;
+                    font-family: Arial, Helvetica, sans-serif;
+
+                    @media screen and (max-width: $lg) {
+                        line-height: 1.7;
+                    }
+    
+                    .pop-up-btn {
+                        @include popup-btn;
+    
+                        .close-btn {
+                            @include closebtn;
+                        }
+                    }
+
+                    .content11-btn2, .content11-btn3 {
+                        top: 4px;
+                        left: -54px;
+
+                        @media screen and (max-width: $md) {
+                            left: -48px;
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            left: -35px;
+                        }
+                    }
+
+                    .content11-btn4 {
+                        top: 0;
+                        right: -57px;
+
+                        @media screen and (max-width: $md) {
+                            right: -50px;
+                        }
+
+                        @media screen and (max-width: $sm) {
+                            right: -27px;
+                        }
+                    }
+    
+                    .pop-up-tooltip {
+                        @include popup-tooltip;
+    
+                        > .head {
+                            @include popup-tooltip-head;
+                        }
+                        
+                        > .para {
+                            @include popup-tooltip-para
+                        }
+                    }
+
+                    .content11-tooltip2 {
+                        top: -35px;
+                        left: 0;
+                        transform: translate(50px, 0px);
+
+                        &::before {
+                            @include popup-tooltip-before(48px, unset, unset, -20px, $tp, $white, $tp, $tp);
+
+                            @media screen and (max-width: $sm) {
+                                top: 43px;
+                            }
+                        }
+                    }
+
+                    .content11-tooltip3 {
+                        top: -190px;
+                        left: 0;
+                        transform: translate(50px, 0px);
+
+                        @media screen and (max-width: $sm) {
+                            top: -100px;
+                        }
+
+                        &::before {
+                            @include popup-tooltip-before(unset, unset, 220px , -20px, $tp, $white, $tp, $tp);
+
+                            @media screen and (max-width: $sm) {
+                                bottom: 90px;
+                            }
+                        }
+                    }
+
+                    .content11-tooltip4 {
+                        top: -260px;
+                        right: 0;
+                        transform: translate(-50px, 0px);
+
+                        @media screen and (max-width: $sm) {
+                            top: -135px;
+                        }
+
+                        &::before {
+                            @include popup-tooltip-before(270px, -20px, unset, unset, $tp, $tp, $tp, $white);
+
+                            @media screen and (max-width: $sm) {
+                                top: 140px;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+    }
+    // ---------------------------------------------------------------------
+
+    // Section 12
+    .section12 {
+        @extend .section9;
+        min-width: 73.2%;
+
+        @media screen and (min-width: $lg) and (max-height: 800px) {
+            min-width: 100%;
+        }
+
+        > img {
+            margin-left: 0;
+
+            @media screen and (max-width: $lg) {
+                height: 60vw;
+            }
+
+            @media screen and (min-width: $lg) and (max-height: 800px) {
+                max-width: 100%;
+            }
+        }   
+    }
+    // ---------------------------------------------------------------------
+
+    // Section 13
+    .section13 {
+        @extend .section2;
+        min-width: 49.6%;
+
+        @media screen and (max-width: $lg) {
+            height: 100vh;
+        }
+
+        @media screen and (max-width: $md) {
+            height: auto;
+        }
+
+        @media screen and (min-width: $lg) and (max-height: 800px){
+            min-width: 880px;
+            padding: 6.6vh 13vh!important;
+            padding-top: 20vh !important;
+        }
+
+        .content13 {
+            @extend .content2;
+
+            > h2 {
+                font-size: calc(7.6px + 3.6vw);
+                line-height: 1.1;
+
+                @media screen and (max-width: $lg) {
+                    font-size: 55px;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 40px;
+                    margin-bottom: 30px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 30px;
+                }
+
+                @media screen and (min-width: $lg) and (max-height: 800px) {
+                    font-size: 2.8571428571rem;
+                }
+            }
+
+            > p {
+                font-size: calc(16.4px + .4vw);
+                line-height: 1.3;
+                margin-bottom: 1rem;
+
+                @media screen and (max-width: $lg) {
+                    line-height: 1.5;
+                    font-size: 28px;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 20px;
+                }
+
+                @media screen and (max-width: $sm) {
+                    font-size: 16px;
+                }
+
+                @media screen and (min-width: $lg) and (max-height: 800px) {
+                    font-size: 1.2857142857rem;
+                }
+            }
+
+            .small {
+                font-size: 12.0pt;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(22, 22, 22);
+                line-height: 1.5;
+
+                @media screen and (max-width: $lg) {
+                    font-size: 12.0pt !important;
+                    line-height: 2.3;
+                    margin-top: 35px;
+                }
+
+                @media screen and (min-width: $lg) and (max-height: 800px) {
+                    font-size: 12.0pt;
+                    line-height: 1.3;
+                }
+
+                @media screen and (max-width: $md) {
+                    font-size: 12.0pt;
+                    line-height: 1.9;
+                }
+            }
+        }
+    }
+    // ---------------------------------------------------------------------
+    // Section 14
+    .section14 {
+        @extend .section12;
+    }
+    // ---------------------------------------------------------------------
+/*
+    // Section 15 
+    .section15 {
+        @extend .section11;
+        min-width: 37%;
+        background-color: $white;
+
+        .content15 {
+            @extend .content11;
+            padding: calc(23.8vh + 14px) 13vh 13vh;
+            color: $black;
+
+            > h2 {
+                font-size: calc(16.4px + 0.4vw);
+                margin-bottom: 2rem;
+            }
+
+            > p {
+                margin-bottom: 2rem;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(36, 36, 36);
+            }
+        }
+    }
+    // --------------------------------------------------------------------
+
+    // Section 16
+    .section16 {
+        @extend .section15;
+        position: relative;
+
+        .content16 {
+            @extend .content15;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 5;
+
+            .header {
+                text-align: center;
+                background-color: $black;
+                color: $white;
+                padding: 3.3vh 20px;
+                letter-spacing: .3em;
+                text-transform: uppercase;
+                
+                > h2 {
+                    font-size: 12px;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+
+            .body {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                background-color: $red-text;
+                padding: 6.6vh 45px;
+                font-family: Arial, Helvetica, sans-serif;
+
+                .body-wrapper {
+                    padding-bottom: 30px;
+                    margin-bottom: 30px;
+                    
+                    > span {
+                        display: block;
+                    }
+
+                    .number {
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+
+        .bw-tower {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+*/
+}

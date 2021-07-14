@@ -1,0 +1,145 @@
+// Color variables
+$red-text : #ed1b2f;
+$white : #fff;
+$black : #000; 
+$faded-black : rgba(49, 49, 49, 0.822);
+$smoke-white : rgba(216, 216, 216, 0.726);
+$tp : transparent;
+
+
+// Font-size and font-weight
+$lg-head-text : 120px;
+$lh : 1.2; //line-height
+
+
+// screen Sizes
+$xlg : 1200px;
+$lg : 992px;
+$md : 768px;
+$sm : 576px;
+
+
+// mixin for pop-up buttons and tooltips
+@mixin popup-btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ed1b2f;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @media screen and (max-width: $sm) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@mixin closebtn {
+    color: $red-text;
+    background-color: $white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.3s;
+}
+
+@mixin popup-tooltip{
+    display: inline-block;
+    width: 400px;
+    position: absolute;
+    z-index: 100;
+    background-color: $white;
+    color: $black;
+    padding: 60px;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+
+    @media screen and (min-width:$lg) and (max-height: 800px) {
+        width: 470px;
+    }
+
+    @media screen and (max-width: $md) {
+        width: 245px;
+        padding: 30px;
+    }
+
+    @media screen and (max-width: $sm) {
+        padding: 20px;
+    }
+}
+
+@mixin popup-tooltip-before($top, $right, $bottom, $left, $tc, $rc, $bc, $lc) {
+    content: '';
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 10px solid;
+    border-color: $tc $rc $bc $lc;
+}
+
+@mixin popup-tooltip-head {
+    display: inline-block;
+    font-size: 1.1428571429rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 25px;
+    
+    @media screen and (max-width: $lg) {
+        font-size: 19px;
+    }
+
+    @media screen and (max-width: $md) {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: $sm) {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width:$lg) and (max-height: 800px) {
+        font-size: 1.1428571429rem;
+    }
+    
+}
+
+@mixin popup-tooltip-para {
+    display: inline-block;
+    font-size: 1.2857142857rem;
+    padding: 0;
+    margin: 0;
+    color: $faded-black;
+    
+    @media screen and (max-width: $lg) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: $md) {
+        font-size: 12px;
+    }
+
+    @media screen and (min-width:$lg) and (max-height: 800px) {
+        font-size: 1.2857142857rem;
+    }
+}
+
+.open {
+    transform: translate(-50%, -50%) scale(0.8) rotate(45deg) !important;
+}
+
+.show {
+    transform: translate(0px, 0px) !important;
+    opacity: 1 !important;
+}
